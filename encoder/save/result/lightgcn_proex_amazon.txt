@@ -1,0 +1,1 @@
+Best Epoch 381. Final test result: {'recall': array([0.10085077, 0.15285274]), 'ndcg': array([0.07700586, 0.09400314])}. 
