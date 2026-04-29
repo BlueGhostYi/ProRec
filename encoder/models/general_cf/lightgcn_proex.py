@@ -147,12 +147,6 @@ class LightGCN_proex(BaseModel):
 
             # The alignment loss within the environment is disabled by default,
             # as this process provides limited performance improvement but significantly increases complexity.
-            # align_loss = 0.
-            # align_loss += self.get_InfoNCE_loss(anc_embeds, ancprf_embeds, 0.2)
-            # align_loss += self.get_InfoNCE_loss(pos_embeds, posprf_embeds, 0.2)
-            # align_loss += self.get_InfoNCE_loss(neg_embeds, negprf_embeds, 0.2)
-            #
-            # env_loss = bpr_loss + self.align_weight * align_loss
 
             env_losses.append(bpr_loss)
 
