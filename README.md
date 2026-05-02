@@ -7,6 +7,10 @@ In recent years, pre-trained large language models (LLMs), empowered by large-sc
 
 The first line of work involves fine-tuning LLMs to serve as holistic recommendation models; however, this approach incurs high computational costs and often suffers from poor generalization across diverse recommendation scenarios. An alternative strategy treats LLMs as plug-and-play enhancement modules, improving base recommender models by incorporating rich semantic priors. As illustrated in the figure, to exploit their advantages in text understanding and generation, LLMs are used to encode user interactions and auxiliary information into compact representations (e.g., **user or item profiles**). Consequently, this paradigm effectively captures salient behavioral or semantic features, achieving promising empirical performance while maintaining greater flexibility and efficiency.
 
+<p align="center">
+<img src="profiling.png" alt="profiling" />
+</p>
+
 ## Environment (based on our test platform)
 ```
 python == 3.8.18
