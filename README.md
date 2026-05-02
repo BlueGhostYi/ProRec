@@ -67,13 +67,13 @@ The hyperparameters of each model are stored in `encoder/config/modelconf`. The 
 
 > Yi Zhang, Yiwen Zhang*, Kai Zheng, Tong Chen, Hongzhi Yin*. 2025. [ProEx: A Unified Framework Leveraging Large Language Model with Profile Extrapolation for Recommendation](https://arxiv.org/abs/2512.00679). The 32nd SIGKDD Conference on Knowledge Discovery and Data Mining (KDD’26).
 
-ProMax aims to fully exploit the information in the original profiles. It constructs new latent interactions for each user through profile-based retrieval. Therefore, for each dataset in `data`, in addition to the original training set `trn_mat.pkl`, a new interaction file `new_trn_rag_mat.pkl` generated via LLM-based re-ranking is also required. Similar to DMRec and ProEx, to run ProMax, the original profiles (Google Drive) must first be downloaded and placed in the dataset folder with the same name. Currently, ProMax is only applicable to discriminative models (e.g., LightGCN). Therefore, in the configuration file, the `type` must be specified as `discriminative` for discriminative models. The following are examples of runs on three datasets:
-
-- `python train_encoder.py --model {model_name}_promax --dataset {dataset} --cuda 0`
-
 <p align="center">
 <img src="pics/ProMax.png" alt="ProMax"" />
 </p>
+
+ProMax aims to fully exploit the information in the original profiles. It constructs new latent interactions for each user through profile-based retrieval. Therefore, for each dataset in `data`, in addition to the original training set `trn_mat.pkl`, a new interaction file `new_trn_rag_mat.pkl` generated via LLM-based re-ranking is also required. Similar to DMRec and ProEx, to run ProMax, the original profiles (Google Drive) must first be downloaded and placed in the dataset folder with the same name. Currently, ProMax is only applicable to discriminative models (e.g., LightGCN). Therefore, in the configuration file, the `type` must be specified as `discriminative` for discriminative models. The following are examples of runs on three datasets:
+
+- `python train_encoder.py --model {model_name}_promax --dataset {dataset} --cuda 0`
 
 The hyperparameters of each model are stored in `encoder/config/modelconf`. The most important hyperparameters are the weights `sdr_weight` and `s2dr_weight`, and the other hyperparameters can be set by default. The `save/log` folder provides training logs for reference. The results of a single experiment may differ slightly from those given in the paper because they were run several times and averaged in the experiment.
 
