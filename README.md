@@ -67,7 +67,7 @@ The hyperparameters of each model are stored in `encoder/config/modelconf`. The 
 
 ### ProMax
 
-> Yi Zhang, Yiwen Zhang*, Kai Zheng, Tong Chen, Hongzhi Yin*. 2025. [ProMax: Exploring the Potential of LLM-derived Profiles with Distribution Shaping for Recommender Systems](https://arxiv.org/abs/2604.26231). The 32nd SIGKDD Conference on Knowledge Discovery and Data Mining (KDD’26).
+> Yi Zhang, Yiwen Zhang*, Kai Zheng, Tong Chen, Hongzhi Yin*. 2025. [ProMax: Exploring the Potential of LLM-derived Profiles with Distribution Shaping for Recommender Systems](https://arxiv.org/abs/2604.26231). The 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR’26).
 
 <p align="center">
 <img src="pics/ProMax.png" alt="ProMax"" />
