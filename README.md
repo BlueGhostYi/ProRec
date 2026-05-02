@@ -29,6 +29,10 @@ tdqm == 4.65.0
 
 > Yi Zhang, Yiwen Zhang*, Yu Wang, Tong Chen, and Hongzhi Yin*. 2025. [Towards Distribution Matching between Collaborative and Language Spaces for Generative Recommendation](https://arxiv.org/abs/2504.07363). In Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR’25).
 
+<p align="center">
+<img src="pics/DMRec.png" alt="DMRec"" />
+</p>
+
 To run DMRec, you first need to download the preprocessed user and item profile representations (Google Drive). DMRec is a recommendation framework, which means you need to define the base model to be run, and then select three matching strategies (GODM, CPDM, and MDDM). The following are examples:
 
 - Global Optimality for Distribution Matching:
@@ -49,6 +53,10 @@ The hyperparameters of each model are stored in `encoder/config/modelconf`. The 
 
 > Yi Zhang, Yiwen Zhang*, Yu Wang, Tong Chen, Hongzhi Yin*. 2025. [ProEx: A Unified Framework Leveraging Large Language Model with Profile Extrapolation for Recommendation](https://arxiv.org/abs/2512.00679). The 32nd SIGKDD Conference on Knowledge Discovery and Data Mining (KDD’26).
 
+<p align="center">
+<img src="pics/ProEx.png" alt="ProEx"" />
+</p>
+
 ProEx introduces three additional profiles based on Chain-of-Thought reasoning on top of the original user or item profile. Therefore, to run ProEx, in addition to downloading the original profiles (Google Drive), it is also necessary to download the corresponding new profiles (Google Drive). Both the original and new profiles must be placed in dataset folders with the same name. Unlike DMRec, ProEx can be applied to both discriminative models (e.g., LightGCN) and generative models (e.g., Mult-VAE). Therefore, in the configuration file, the `type` must be specified as `generative` for generative models; and the `type` must be specified as `discriminative` for discriminative models. The following are examples of runs on three datasets:
 
 - `python train_encoder.py --model {model_name}_proex --dataset {dataset} --cuda 0`
@@ -62,6 +70,10 @@ The hyperparameters of each model are stored in `encoder/config/modelconf`. The 
 ProMax aims to fully exploit the information in the original profiles. It constructs new latent interactions for each user through profile-based retrieval. Therefore, for each dataset in `data`, in addition to the original training set `trn_mat.pkl`, a new interaction file `new_trn_rag_mat.pkl` generated via LLM-based re-ranking is also required. Similar to DMRec and ProEx, to run ProMax, the original profiles (Google Drive) must first be downloaded and placed in the dataset folder with the same name. Currently, ProMax is only applicable to discriminative models (e.g., LightGCN). Therefore, in the configuration file, the `type` must be specified as `discriminative` for discriminative models. The following are examples of runs on three datasets:
 
 - `python train_encoder.py --model {model_name}_promax --dataset {dataset} --cuda 0`
+
+<p align="center">
+<img src="pics/ProMax.png" alt="ProMax"" />
+</p>
 
 The hyperparameters of each model are stored in `encoder/config/modelconf`. The most important hyperparameters are the weights `sdr_weight` and `s2dr_weight`, and the other hyperparameters can be set by default. The `save/log` folder provides training logs for reference. The results of a single experiment may differ slightly from those given in the paper because they were run several times and averaged in the experiment.
 
