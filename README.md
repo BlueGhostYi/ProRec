@@ -3,13 +3,13 @@
 
 ProRec is an integrated library that brings together our latest advances in LLM-based user profiling for recommendation. 
 
-In recent years, pre-trained large language models (LLMs), empowered by large-scale textual corpora and advanced generative capabilities, have demonstrated remarkable generalization ability. Leveraging this strength, researchers have begun to explore the application of LLMs in recommender systems to alleviate data sparsity.
-
-The first line of work involves fine-tuning LLMs to serve as holistic recommendation models; however, this approach incurs high computational costs and often suffers from poor generalization across diverse recommendation scenarios. An alternative strategy treats LLMs as plug-and-play enhancement modules, improving base recommender models by incorporating rich semantic priors. As illustrated in the figure, to exploit their advantages in text understanding and generation, LLMs are used to encode user interactions and auxiliary information into compact representations (e.g., **user or item profiles**). Consequently, this paradigm effectively captures salient behavioral or semantic features, achieving promising empirical performance while maintaining greater flexibility and efficiency.
+In recent years, pre-trained Large Language Models (LLMs) have demonstrated remarkable generalization ability for recommender systems. The first line of work involves fine-tuning LLMs to serve as holistic recommendation models; however, this approach incurs high computational costs and often suffers from poor generalization across diverse recommendation scenarios. An alternative strategy treats LLMs as plug-and-play enhancement modules, improving base recommender models by incorporating rich semantic priors. As illustrated in the figure (a), to exploit their advantages in text understanding and generation, LLMs are used to encode user interactions and auxiliary information into compact representations (e.g., **user or item profiles**). Consequently, this paradigm effectively captures salient behavioral or semantic features, achieving promising empirical performance while maintaining greater flexibility and efficiency.
 
 <p align="center">
 <img src="profiling.png" alt="profiling" />
 </p>
+
+As illustrated in the figure (b), the objective of user profiling is to leverage LLMs to construct high-quality user profiles that capture user preferences for downstream recommendation tasks. However, when user–item interactions are highly sparse or exhibit complex patterns, one-shot profiling often produces unreliable or even meaningless results (as shown in figure (c)). Such profiles may misrepresent user interests and introduce noise during training, thereby hindering subsequent recommendation performance.
 
 ## Environment (based on our test platform)
 ```
