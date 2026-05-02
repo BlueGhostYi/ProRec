@@ -1,5 +1,5 @@
 # ProRec
-**📝LLM-derived Profiling for Recommendation (ProRec)**
+**LLM-derived Profiling for Recommendation (ProRec)**
 <p float="left"><img src="https://img.shields.io/badge/Python-v3.8.18-blue"> <img src="https://img.shields.io/badge/PyTorch-v2.1.0-green"> <br>
 
 In recent years, pre-trained Large Language Models (LLMs) have demonstrated remarkable generalization ability for recommender systems. The first line of work involves fine-tuning LLMs to serve as holistic recommendation models; however, this approach incurs high computational costs and often suffers from poor generalization across diverse recommendation scenarios. An alternative strategy treats LLMs as plug-and-play enhancement modules, improving base recommender models by incorporating rich semantic priors. As illustrated in the figure (a), to exploit their advantages in text understanding and generation, LLMs are used to encode user interactions and auxiliary information into compact representations (e.g., **user or item profiles**). 
@@ -13,7 +13,7 @@ As illustrated in the figure (b), the objective of user profiling is to leverage
 Based on this, **ProRec** builds upon prior research works such as KAR and RLMRec to conduct a more fine-grained investigation of the aforementioned issues.
 Specifically, ProRec is an integrated recommendation model library that encompasses our latest research advances in LLM-based user profiling for recommendation. It covers how to construct user profiles, how to align them with different types of recommendation models, and how to maximize the utilization of their semantic information. Currently, ProRec provides three recommendation models: **DMRec (SIGIR'25)**, **ProEx (KDD'26)**, and **ProMax (SIGIR'26)**. ProRec is still under active development and undergoing continuous refinement. Please stay tuned.
 
-## Environment (based on our test platform)
+## 📝 Environment (based on our test platform)
 ```
 python == 3.8.18
 pytorch == 2.1.0 (cuda:12.1)
@@ -23,7 +23,7 @@ tdqm == 4.65.0
 ```
 > For some special models, additional third-party libraries may be required.
 
-## Examples to Run 
+## 📝 Examples to Run 
 
 ### DMRec
 
