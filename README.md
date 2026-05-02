@@ -33,7 +33,7 @@ tdqm == 4.65.0
 <img src="pics/DMRec.png" alt="DMRec"" />
 </p>
 
-To run DMRec, you first need to download the preprocessed user and item profile representations (Google Drive). DMRec is a recommendation framework, which means you need to define the base model to be run, and then select three matching strategies (GODM, CPDM, and MDDM). The following are examples:
+To run DMRec, you first need to download the preprocessed user and item profile representations ([Google Drive](https://drive.google.com/drive/folders/1_fCatrlFgBVTmPFFi-dwFCopElQQX70w?usp=sharing)). DMRec is a recommendation framework, which means you need to define the base model to be run, and then select three matching strategies (GODM, CPDM, and MDDM). The following are examples:
 
 - Global Optimality for Distribution Matching:
 
@@ -57,7 +57,7 @@ The hyperparameters of each model are stored in `encoder/config/modelconf`. The 
 <img src="pics/ProEx.png" alt="ProEx"" />
 </p>
 
-ProEx introduces three additional profiles based on Chain-of-Thought reasoning on top of the original user or item profile. Therefore, to run ProEx, in addition to downloading the original profiles (Google Drive), it is also necessary to download the corresponding new profiles ([Google Drive](https://drive.google.com/drive/folders/1x7TAiY2zYFrtPcNuzV3jrdiCO5rokuqd?usp=sharing)). Both the original and new profiles must be placed in dataset folders with the same name. Unlike DMRec, ProEx can be applied to both discriminative models (e.g., LightGCN) and generative models (e.g., Mult-VAE). Therefore, in the configuration file, the `type` must be specified as `generative` for generative models; and the `type` must be specified as `discriminative` for discriminative models. The following are examples of runs on three datasets:
+ProEx introduces three additional profiles based on Chain-of-Thought reasoning on top of the original user or item profile. Therefore, to run ProEx, in addition to downloading the original profiles ([Google Drive](https://drive.google.com/drive/folders/1_fCatrlFgBVTmPFFi-dwFCopElQQX70w?usp=sharing)), it is also necessary to download the corresponding new profiles ([Google Drive](https://drive.google.com/drive/folders/1x7TAiY2zYFrtPcNuzV3jrdiCO5rokuqd?usp=sharing)). Both the original and new profiles must be placed in dataset folders with the same name. Unlike DMRec, ProEx can be applied to both discriminative models (e.g., LightGCN) and generative models (e.g., Mult-VAE). Therefore, in the configuration file, the `type` must be specified as `generative` for generative models; and the `type` must be specified as `discriminative` for discriminative models. The following are examples of runs on three datasets:
 
 - `python train_encoder.py --model {model_name}_proex --dataset {dataset} --cuda 0`
 
@@ -71,7 +71,7 @@ The hyperparameters of each model are stored in `encoder/config/modelconf`. The 
 <img src="pics/ProMax.png" alt="ProMax"" />
 </p>
 
-ProMax aims to fully exploit the information in the original profiles. It constructs new latent interactions for each user through profile-based retrieval. Therefore, for each dataset in `data`, in addition to the original training set `trn_mat.pkl`, a new interaction file `new_trn_rag_mat.pkl` generated via LLM-based re-ranking is also required. Similar to DMRec and ProEx, to run ProMax, the original profiles (Google Drive) must first be downloaded and placed in the dataset folder with the same name. Currently, ProMax is only applicable to discriminative models (e.g., LightGCN). Therefore, in the configuration file, the `type` must be specified as `discriminative` for discriminative models. The following are examples of runs on three datasets:
+ProMax aims to fully exploit the information in the original profiles. It constructs new latent interactions for each user through profile-based retrieval. Therefore, for each dataset in `data`, in addition to the original training set `trn_mat.pkl`, a new interaction file `new_trn_rag_mat.pkl` generated via LLM-based re-ranking is also required. Similar to DMRec and ProEx, to run ProMax, the original profiles ([Google Drive](https://drive.google.com/drive/folders/1_fCatrlFgBVTmPFFi-dwFCopElQQX70w?usp=sharing)) must first be downloaded and placed in the dataset folder with the same name. Currently, ProMax is only applicable to discriminative models (e.g., LightGCN). Therefore, in the configuration file, the `type` must be specified as `discriminative` for discriminative models. The following are examples of runs on three datasets:
 
 - `python train_encoder.py --model {model_name}_promax --dataset {dataset} --cuda 0`
 
