@@ -1,7 +1,6 @@
 # ProRec
-## 📝LLM-derived Profiling for Recommendation (ProRec)
-
-ProRec is an integrated library that brings together our latest advances in LLM-based user profiling for recommendation. 
+** 📝LLM-derived Profiling for Recommendation (ProRec)**
+<p float="left"><img src="https://img.shields.io/badge/Python-v3.8.18-blue"> <img src="https://img.shields.io/badge/PyTorch-v2.1.0-green"> <br>
 
 In recent years, pre-trained Large Language Models (LLMs) have demonstrated remarkable generalization ability for recommender systems. The first line of work involves fine-tuning LLMs to serve as holistic recommendation models; however, this approach incurs high computational costs and often suffers from poor generalization across diverse recommendation scenarios. An alternative strategy treats LLMs as plug-and-play enhancement modules, improving base recommender models by incorporating rich semantic priors. As illustrated in the figure (a), to exploit their advantages in text understanding and generation, LLMs are used to encode user interactions and auxiliary information into compact representations (e.g., **user or item profiles**). 
 
