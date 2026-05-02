@@ -65,7 +65,7 @@ The hyperparameters of each model are stored in `encoder/config/modelconf`. The 
 
 ### ProMax
 
-> Yi Zhang, Yiwen Zhang*, Kai Zheng, Tong Chen, Hongzhi Yin*. 2025. [ProEx: A Unified Framework Leveraging Large Language Model with Profile Extrapolation for Recommendation](https://arxiv.org/abs/2512.00679). The 32nd SIGKDD Conference on Knowledge Discovery and Data Mining (KDD’26).
+> Yi Zhang, Yiwen Zhang*, Kai Zheng, Tong Chen, Hongzhi Yin*. 2025. [ProMax: Exploring the Potential of LLM-derived Profiles with Distribution Shaping for Recommender Systems](https://arxiv.org/abs/2604.26231). The 32nd SIGKDD Conference on Knowledge Discovery and Data Mining (KDD’26).
 
 <p align="center">
 <img src="pics/ProMax.png" alt="ProMax"" />
