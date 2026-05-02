@@ -5,7 +5,7 @@
 In recent years, pre-trained Large Language Models (LLMs) have demonstrated remarkable generalization ability for recommender systems. The first line of work involves fine-tuning LLMs to serve as holistic recommendation models; however, this approach incurs high computational costs and often suffers from poor generalization across diverse recommendation scenarios. An alternative strategy treats LLMs as plug-and-play enhancement modules, improving base recommender models by incorporating rich semantic priors. As illustrated in the figure (a), to exploit their advantages in text understanding and generation, LLMs are used to encode user interactions and auxiliary information into compact representations (e.g., **user or item profiles**). 
 
 <p align="center">
-<img src="profiling.png" alt="profiling", style="width: 50%;" />
+<img src="pics/profiling.png" alt="profiling", style="width: 50%;" />
 </p>
 
 As illustrated in the figure (b), the objective of user profiling is to leverage LLMs to construct high-quality user profiles that capture user preferences for downstream recommendation tasks. However, when user–item interactions are highly sparse or exhibit complex patterns, one-shot profiling often produces unreliable or even meaningless results (as shown in figure (c)). Such profiles may misrepresent user interests and introduce noise during training, thereby hindering subsequent recommendation performance.
