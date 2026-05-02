@@ -11,7 +11,9 @@ In recent years, pre-trained Large Language Models (LLMs) have demonstrated rema
 As illustrated in the figure (b), the objective of user profiling is to leverage LLMs to construct high-quality user profiles that capture user preferences for downstream recommendation tasks. However, when user–item interactions are highly sparse or exhibit complex patterns, one-shot profiling often produces unreliable or even meaningless results (as shown in figure (c)). Such profiles may misrepresent user interests and introduce noise during training, thereby hindering subsequent recommendation performance.
 
 Based on this, **ProRec** builds upon prior research works such as KAR and RLMRec to conduct a more fine-grained investigation of the aforementioned issues.
-Specifically, ProRec is an integrated recommendation model library that encompasses our latest research advances in LLM-based user profiling for recommendation. It covers how to construct user profiles, how to align them with different types of recommendation models, and how to maximize the utilization of their semantic information. Currently, ProRec provides three recommendation models: **DMRec (SIGIR'25)**, **ProEx (KDD'26)**, and **ProMax (SIGIR'26)**. ProRec is still under active development and undergoing continuous refinement. Please stay tuned.
+Specifically, ProRec is an integrated recommendation model library that encompasses our latest research advances in LLM-based user profiling for recommendation. It covers how to construct user profiles, how to align them with different types of recommendation models, and how to maximize the utilization of their semantic information. Currently, ProRec provides three recommendation models: **DMRec (SIGIR'25)**, **ProEx (KDD'26)**, and **ProMax (SIGIR'26)**. 
+
+**ProRec is still under active development and undergoing continuous refinement. Please stay tuned.**
 
 ## 📝 Environment (based on our test platform)
 ```
